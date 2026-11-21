@@ -1,0 +1,14 @@
+{
+  "title": "Gửi tiết kiệm 1 tỷ: lãi được bao nhiêu mỗi tháng?",
+  "scenes": [
+    {"voice": "Bạn có một tỷ đồng gửi ngân hàng, mỗi tháng nhận về bao nhiêu tiền lãi?", "headline": "Gửi 1 tỷ lãi bao nhiêu?", "highlight": "1 TỶ", "visual_query": "bank savings money", "image_prompt": "Vietnamese banknotes stacked on a desk in a bank, warm light"},
+    {"voice": "Với lãi suất khoảng 5 phần trăm một năm, số lãi cả năm là 50 triệu đồng.", "headline": "Lãi suất 5%/năm", "highlight": "50 triệu", "visual_query": "calculator finance", "image_prompt": "Hand using calculator with finance documents"},
+    {"voice": "Chia ra mỗi tháng, bạn nhận khoảng 4 triệu 2 trăm nghìn đồng.", "headline": "Mỗi tháng nhận về", "highlight": "4,2 triệu", "visual_query": "counting money hands", "image_prompt": "Hands counting Vietnamese dong banknotes"},
+    {"voice": "Nhưng nếu lạm phát 4 phần trăm, sức mua thật của bạn gần như đứng yên.", "headline": "Cẩn thận lạm phát", "highlight": "-4%", "visual_query": "supermarket prices", "image_prompt": "Busy Vietnamese market with price tags"},
+    {"voice": "Vì vậy tiết kiệm là để giữ tiền, còn muốn tiền lớn lên, bạn cần thêm kênh đầu tư phù hợp.", "headline": "Giữ tiền hay tăng tiền?", "highlight": "", "visual_query": "city skyline growth", "image_prompt": "Ho Chi Minh City skyline at sunset"},
+    {"voice": "Bạn đang để tiền ở đâu? Bình luận cho mình biết và theo dõi để xem phần tiếp theo nhé.", "headline": "Bạn chọn kênh nào?", "highlight": "", "visual_query": "smartphone social media", "image_prompt": "Young Vietnamese person looking at smartphone"}
+  ],
+  "caption": "Gửi tiết kiệm 1 tỷ thì mỗi tháng nhận bao nhiêu? Và vì sao chỉ gửi tiết kiệm là chưa đủ. Bạn đang để tiền ở đâu?",
+  "hashtags": ["#taichinh", "#tietkiem", "#laisuat", "#dautu", "#taichinhcanhan"],
+  "sources": []
+}
