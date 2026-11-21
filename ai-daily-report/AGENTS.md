@@ -1,37 +1,45 @@
 # Bộ agent "Bản tin AI đột phá" hằng ngày
 
-Lịch: chạy 6:37 sáng giờ Việt Nam (Asia/Ho_Chi_Minh) để báo cáo sẵn sàng trước 7:00.
-Ngôn ngữ báo cáo: tiếng Việt. Mỗi ngày một Claude Doc mới, tiêu đề "Bản tin AI đột phá – DD/MM/YYYY".
+Mỗi agent chạy trong **một phiên riêng**, theo lịch riêng (giờ Việt Nam, Asia/Ho_Chi_Minh). Báo cáo cuối sẵn sàng trước 7:00.
 
-## Agent 1 – Nghiên cứu AI cho Marketing
+| Giờ | Phiên | Việc | Kết quả |
+| --- | --- | --- | --- |
+| 6:03 | Agent Marketing | Nghiên cứu | `runs/YYYY-MM-DD/marketing.md` |
+| 6:07 | Agent Kinh doanh & Bán hàng | Nghiên cứu | `runs/YYYY-MM-DD/sales.md` |
+| 6:11 | Agent Doanh nghiệp | Nghiên cứu | `runs/YYYY-MM-DD/enterprise.md` |
+| 6:41 | Agent Tổng hợp | Gộp 3 file, viết Claude Doc, gửi email | Claude Doc + email tới mrbeanvn21@gmail.com |
+
+Các phiên trao đổi qua thư mục chung của dự án: `/mnt/project-files/ai-daily-report/runs/YYYY-MM-DD/`.
+Ngôn ngữ: tiếng Việt.
+
+## Agent 1 – Marketing (6:03)
 Phạm vi: content/video/hình ảnh bằng AI, GEO/AI search visibility, quảng cáo & cá nhân hoá, KOL/creator, martech, mạng xã hội.
 Nguồn gợi ý: agilebrandguide.com (Yesterday's Marketing Technology & AI News), martech.org, adage.com, thông cáo báo chí (prnewswire, globenewswire, businesswire).
 
-## Agent 2 – Nghiên cứu AI cho Kinh doanh & Bán hàng
-Phạm vi: AI sales agent/SDR, CRM + AI (Salesforce, HubSpot, ChatGPT/Copilot plugin), chăm sóc khách hàng, thương mại điện tử & agentic commerce, gọi vốn lớn của startup sales AI.
+## Agent 2 – Kinh doanh & Bán hàng (6:07)
+Phạm vi: AI sales agent/SDR, CRM + AI (Salesforce, HubSpot, plugin ChatGPT/Copilot/Claude), chăm sóc khách hàng, thương mại điện tử & agentic commerce, gọi vốn lớn của startup sales AI.
 Nguồn gợi ý: unite.ai, techcrunch.com, venturebeat.com, blog chính thức OpenAI/Anthropic/Google/Microsoft/Salesforce, agilebrandguide.com.
 
-## Agent 3 – Nghiên cứu AI cho Doanh nghiệp
-Phạm vi: nền tảng agent doanh nghiệp, quản trị/bảo mật agent, triển khai thực tế có số liệu (case study), mô hình mới có ý nghĩa cho doanh nghiệp, hạ tầng.
-Nguồn gợi ý: aiagentstore.ai/ai-agent-news/this-week, aiagentsdirectory.com/news, newsroom các hãng (IBM, Microsoft, AWS, Google Cloud, Databricks), riorundown.substack.com.
+## Agent 3 – Doanh nghiệp (6:11)
+Phạm vi: nền tảng agent doanh nghiệp, quản trị/bảo mật agent, triển khai thực tế có số liệu, mô hình mới có ý nghĩa cho doanh nghiệp, hạ tầng.
+Nguồn gợi ý: aiagentstore.ai/ai-agent-news/this-week, aiagentsdirectory.com/news, newsroom IBM/Microsoft/AWS/Google Cloud/Databricks, riorundown.substack.com.
 
 ### Quy tắc chung cho 3 agent nghiên cứu
-- Chỉ lấy tin trong 48 giờ gần nhất (thứ Hai: 72 giờ). Không lặp lại tin đã có trong bản tin hôm trước.
+- Chỉ lấy tin trong 48 giờ gần nhất (thứ Hai: 72 giờ). Không lặp lại tin đã có trong file hôm qua.
 - Mở trang gốc trước khi lấy số liệu, không dựa vào đoạn trích kết quả tìm kiếm.
-- Mỗi agent trả về tối đa 6 mục: tên ứng dụng, công ty, ngày, điểm đột phá cụ thể (có số liệu nếu có), URL nguồn, ghi chú nếu số liệu do công ty tự công bố.
-- Tiêu chí "đột phá": làm được việc mới, có số liệu kết quả thật, do công ty lớn tung ra, hoặc có thể áp dụng ngay cho doanh nghiệp Việt Nam.
+- Ghi tối đa 6 mục: tên ứng dụng, công ty, ngày, điểm đột phá cụ thể (có số liệu nếu có), URL nguồn, ghi chú nếu số liệu do công ty tự công bố. Thêm 1 câu nhận định xu hướng.
+- Tiêu chí "đột phá": làm được việc mới, có số liệu kết quả thật, do công ty lớn tung ra, hoặc áp dụng ngay được cho doanh nghiệp Việt Nam.
+- Không viết báo cáo cuối, không gửi email.
 
-## Agent 4 – Tổng hợp & viết báo cáo
-1. Gộp, loại trùng, chọn 4–6 mục mạnh nhất mỗi mảng.
-2. Viết Claude Doc theo khung:
+## Agent 4 – Tổng hợp & gửi (6:41)
+1. Đọc 3 file kết quả của ngày. Thiếu file nào thì tự nghiên cứu nhanh mảng đó và ghi chú lại.
+2. Gộp, loại trùng, chọn 4–6 mục mạnh nhất mỗi mảng.
+3. Viết Claude Doc "Bản tin AI đột phá – DD/MM/YYYY":
    - Tóm tắt nhanh: 5 điểm nổi bật nhất
    - 1. AI cho Marketing (câu nhận định xu hướng + bảng: Ứng dụng | Đơn vị | Ngày | Điểm đột phá)
    - 2. AI cho Kinh doanh & Bán hàng (như trên)
    - 3. AI cho Doanh nghiệp (như trên)
    - 4. Gợi ý hành động cho doanh nghiệp Việt Nam (3–4 gạch đầu dòng)
    - Nguồn tham khảo
-3. Câu ngắn, có số liệu, không dùng emoji. Ghi rõ khi số liệu do công ty tự công bố.
-
-## Gửi kết quả
-- Sau khi tạo Doc, gửi email báo cáo (tiêu đề "Bản tin AI đột phá – DD/MM/YYYY", nội dung là toàn bộ báo cáo + link Doc) tới mrbeanvn21@gmail.com qua Gmail.
-- Đồng thời gửi thông báo đẩy về điện thoại khi chạy xong.
+4. Gửi email toàn bộ báo cáo + link Doc tới mrbeanvn21@gmail.com qua Gmail; gửi thông báo đẩy về điện thoại.
+5. Câu ngắn, có số liệu, không emoji. Ghi rõ khi số liệu do công ty tự công bố.
