@@ -21,6 +21,13 @@ Nhận định: AI search đã thành kênh bán hàng mùa lễ, nên các côn
 | [Ask YouTube trên TV và máy chơi game](https://ppc.land/youtube-puts-ask-youtube-ai-search-on-tvs-and-gaming-consoles/) | YouTube (Google) | 19/11/2026 | Tìm kiếm hội thoại bằng giọng nói trên TV, trả lời kèm clip và tóm tắt video. YouTube nói hơn 140 triệu người dùng Ask YouTube (6/2026) và hơn 1 tỉ giờ xem trên TV mỗi ngày (tự công bố). |
 | [Khảo sát doanh nghiệp nhỏ mùa lễ](https://www.globenewswire.com/news-release/2026/11/19/3406608/0/en/verizon-survey-small-businesses-turn-to-social-media-ai-for-holidays.html) | Verizon Business | 19/11/2026 | 600 chủ doanh nghiệp nhỏ Mỹ: 45% dùng AI cho mùa lễ, 56% sẽ mở rộng AI sang marketing và tồn kho, 34% cần hỗ trợ làm nội dung mạng xã hội. Khảo sát do công ty đặt hàng. |
 
+### Tư vấn giải pháp: Marketing nên làm gì
+
+- **Đo độ hiện diện trên AI search (tuần này):** lập bộ 20–30 câu hỏi khách hay hỏi về ngành, hỏi ChatGPT, Gemini, Google AI Overviews; ghi thương hiệu nào được nêu, nguồn nào được trích. Lặp lại mỗi 2 tuần để thấy xu hướng. Công cụ: bảng tính thủ công trước, sau đó cân nhắc Profound hoặc Brandi AI khi cần quy mô.
+- **Viết lại nội dung để AI dễ trích dẫn (tháng này):** trang sản phẩm và bài blog cần câu trả lời ngắn ở đầu, bảng thông số, FAQ, số liệu có nguồn. Đây là thứ AI Overviews và ChatGPT thường lấy làm nguồn.
+- **Giữ "chất thật" trong quảng cáo:** dùng AI để làm nháp, biến thể và video ngắn, nhưng giữ ảnh sản phẩm thật, đánh giá thật của khách. 30% người mua Bắc Mỹ quay lưng với người mẫu AI, nên A/B test trước khi thay toàn bộ.
+- **Chỉ số theo dõi:** tỉ lệ câu hỏi có nêu thương hiệu, số nguồn của mình được trích, lượt truy cập đến từ ChatGPT/Perplexity trong Google Analytics.
+
 ## 2. AI cho Kinh doanh & Bán hàng
 
 Nhận định: Trước Black Friday, cuộc đua chuyển sang để AI agent tự thanh toán, nhưng niềm tin và tỉ lệ đơn bị chặn vẫn là điểm nghẽn. 48 giờ qua ít tin lớn, nên bảng có thêm 2 tin ngày 17/11 (ngoài khung 48 giờ, ghi rõ).
@@ -31,6 +38,13 @@ Nhận định: Trước Black Friday, cuộc đua chuyển sang để AI agent 
 | [Hướng dẫn agentic commerce](https://www.globenewswire.com/news-release/2026/11/20/3407735/0/en/new-agentic-commerce-guide-arrives-as-22-of-ai-agent-users-report-blocked-purchases.html) | Ecommerce.com, dựa trên khảo sát Salesforce | 20/11/2026 | Khảo sát hơn 2.500 người mua: 31% đã thử AI agent, trong đó 22% bị chặn khi mua, chỉ 32% không gặp lỗi lớn. Khách đến từ AI chuyển đổi cao hơn 2 lần (theo thông cáo, cỡ mẫu nhóm con chưa rõ). |
 | [ChatGPT for Sales](https://openai.com/index/introducing-chatgpt-for-sales/) | OpenAI | 17/11/2026 (ngoài 48 giờ) | Plugin Sales cùng hơn 30 plugin đối tác (Salesforce, HubSpot, Gong, Outreach...) và agent chạy việc định kỳ như rà soát deal hằng ngày. Khách hàng NeoBid ước tính giảm khoảng 65% công sức thủ công (ước tính của khách hàng). |
 | [Copilotforce: Salesforce trong Copilot và Teams](https://www.salesforce.com/news/stories/copilotforce-announcement/) | Salesforce và Microsoft | 17/11/2026 (ngoài 48 giờ) | Hỏi và thao tác Salesforce bằng ngôn ngữ tự nhiên trong Copilot (preview), Sales Cloud trong Teams (pilot). Accenture triển khai đầu tiên: Copilot cho hơn 740.000 người (tự công bố). |
+
+### Tư vấn giải pháp: Kinh doanh & Bán hàng nên làm gì
+
+- **Thí điểm trợ lý bán hàng AI 2 tuần:** chọn 2–3 nhân viên sales, nối CRM (HubSpot, Salesforce hoặc Google Sheets) với ChatGPT Business hoặc Copilot. Giao 3 việc: chuẩn bị trước cuộc gọi, soạn email follow-up, tóm tắt pipeline đầu ngày. Đo số giờ tiết kiệm và số lượt follow-up đúng hạn.
+- **Làm sạch dữ liệu CRM trước:** AI chỉ tốt khi dữ liệu khách, giai đoạn deal và ghi chú cuộc gọi đầy đủ. Dành 1 tuần chuẩn hoá trường bắt buộc trước khi mua công cụ.
+- **Sẵn sàng cho khách mua qua AI agent:** dữ liệu sản phẩm (giá, tồn kho, mô tả, chính sách đổi trả) phải có cấu trúc và cập nhật; kiểm tra checkout không chặn nhầm bot hợp lệ. 22% người dùng agent đang bị chặn khi mua, đó là doanh thu bị mất.
+- **Chỉ số theo dõi:** thời gian chuẩn bị mỗi cuộc gọi, tỉ lệ phản hồi email, tỉ lệ chốt deal của nhóm thí điểm so với nhóm còn lại.
 
 ## 3. AI cho Doanh nghiệp
 
@@ -43,6 +57,13 @@ Nhận định: Trọng tâm đang dịch từ xây agent sang quản agent: age
 | [Gemini 4 Neon](https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-neon/) | Google | 19/11/2026 (giờ Việt Nam) | Mô hình tầm trung, 3 USD/15 USD mỗi 1 triệu token vào/ra, ngữ cảnh 1 triệu token. Google nói chi phí mỗi tác vụ thấp hơn 32% so với Carbon (tự công bố); đứng #1 Artificial Analysis Coding Agent Index (bên thứ ba). |
 | [Hy4 flash mở trọng số](https://technode.com/2026/11/19/tencent-releases-hy4-flash-model-weights-for-local-deployment/) | Tencent | 19/11/2026 | Khoảng 224 tỷ tham số, 12 tỷ kích hoạt mỗi token, ngữ cảnh 1 triệu token, chạy tại chỗ để giữ dữ liệu trong nước. Thông số do Tencent công bố; cần đọc giấy phép trước khi dùng thương mại. |
 | [Agent có danh tính Microsoft 365 trong Foundry](https://learn.microsoft.com/azure/foundry/agents/concepts/agent-365-integration) | Microsoft | 19/11/2026 | Agent được cấp danh tính Entra, email, lịch, OneDrive và một người quản lý chịu trách nhiệm; kèm hạn mức token, theo dõi chi phí và truy vết xuyên agent. Chưa có số liệu; trạng thái GA/preview cần kiểm tra lại. |
+
+### Tư vấn giải pháp: Doanh nghiệp nên làm gì
+
+- **Chọn 1 quy trình lặp lại để tự động hoá bằng agent:** ví dụ đối soát hoá đơn, xử lý yêu cầu nội bộ, báo cáo tuần. Tiêu chí: làm nhiều lần mỗi ngày, có quy tắc rõ, sai thì sửa được. Bắt đầu với người duyệt ở bước cuối, như AT&T và OpenAI đang làm.
+- **Đặt "luật chơi" cho agent ngay từ đầu:** mỗi agent có một người chịu trách nhiệm, hạn mức chi phí token mỗi tháng, danh sách công cụ và dữ liệu được phép dùng, và nhật ký mọi hành động. Đây là xu hướng Microsoft và AWS vừa đưa vào sản phẩm.
+- **Tối ưu chi phí mô hình:** dùng mô hình tầm trung rẻ (như Gemini 4 Neon) cho việc thường ngày, mô hình mạnh chỉ cho việc khó. Với dữ liệu nhạy cảm, cân nhắc mô hình mở chạy tại chỗ (như Hy4 flash) sau khi kiểm tra giấy phép.
+- **Chỉ số theo dõi:** số giờ công tiết kiệm mỗi tháng, tỉ lệ việc agent làm đúng không cần sửa, chi phí AI trên mỗi tác vụ.
 
 ## 4. Gợi ý hành động cho doanh nghiệp Việt Nam
 

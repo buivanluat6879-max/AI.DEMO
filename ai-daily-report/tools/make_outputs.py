@@ -44,7 +44,15 @@ def parse_report(text):
                     cells = [c.strip() for c in line.strip().strip("|").split("|")]
                     if len(cells) >= 2 and cells[0].lower() not in ("ứng dụng",):
                         items.append({"name": strip_md(cells[0]), "org": strip_md(cells[1])})
-            data["areas"].append({"name": re.sub(r"^[123]\.\s*", "", head), "trend": trend, "items": items})
+            advice = []
+            am = re.search(r"^###\s+Tư vấn giải pháp.*?$(.*?)(?=^###\s|\Z)", body, re.M | re.S)
+            if am:
+                for b in re.findall(r"^\s*[-*]\s+(.+)$", am.group(1), re.M):
+                    bm = re.match(r"\*\*(.+?)\*\*", b)
+                    label = (bm.group(1) if bm else strip_md(b)).rstrip(": ").strip()
+                    if not label.lower().startswith("chỉ số"):
+                        advice.append(label)
+            data["areas"].append({"name": re.sub(r"^[123]\.\s*", "", head), "trend": trend, "items": items, "advice": advice})
         elif head.startswith("4.") or head.lower().startswith("gợi ý"):
             data["actions"] = [strip_md(x) for x in re.findall(r"^\s*[-*]\s+(.+)$", body, re.M)]
     return data
@@ -75,6 +83,10 @@ h1{font-size:62px;line-height:1.05;font-weight:800;margin-top:10px}
 .area ul{list-style:none;margin-top:12px;display:flex;flex-direction:column;gap:10px}
 .area li{font-size:17px;line-height:1.3;font-weight:600}
 .area li span{display:block;font-weight:400;color:#9FB2CF;font-size:15px}
+.adv{margin-top:14px;padding-top:12px;border-top:1px solid #2A4268}
+.adv b{display:block;font-size:14px;letter-spacing:1.5px;text-transform:uppercase;color:var(--c)}
+.adv ol{margin:8px 0 0 20px;display:flex;flex-direction:column;gap:6px}
+.adv li{font-size:15.5px;line-height:1.3;color:#E8EEF8;font-weight:500}
 .act{margin-top:24px;background:#F2B53A;color:#1A1300;border-radius:16px;padding:18px 22px}
 .act b{display:block;font-size:17px;letter-spacing:2px;text-transform:uppercase}
 .act p{font-size:20px;line-height:1.35;margin-top:6px;font-weight:500}
@@ -92,8 +104,10 @@ def build_poster_html(d):
     areas = ""
     for i, a in enumerate(d["areas"][:3]):
         lis = "".join(f'<li>{e(first_sentence(it["name"], 60))}<span>{e(first_sentence(it["org"], 40))}</span></li>'
-                      for it in a["items"][:4])
-        areas += f'<div class="area" style="--c:{COLORS[i % 3]}"><h2>{e(re.sub(r"^AI cho ", "", a["name"]))}</h2><ul>{lis}</ul></div>'
+                      for it in a["items"][:3])
+        adv = "".join(f"<li>{e(first_sentence(x, 70))}</li>" for x in a.get("advice", [])[:3])
+        adv_html = f'<div class="adv"><b>Nên làm gì</b><ol>{adv}</ol></div>' if adv else ""
+        areas += f'<div class="area" style="--c:{COLORS[i % 3]}"><h2>{e(re.sub(r"^AI cho ", "", a["name"]))}</h2><ul>{lis}</ul>{adv_html}</div>'
     act = d["actions"][0] if d["actions"] else ""
     act_html = f'<div class="act"><b>Việc nên làm ngay</b><p>{e(first_sentence(act, 190))}</p></div>' if act else ""
     return f"""<!doctype html><html lang="vi"><head><meta charset="utf-8"><style>{POSTER_CSS}</style></head>
