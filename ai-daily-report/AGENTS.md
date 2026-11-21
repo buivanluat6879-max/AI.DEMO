@@ -7,7 +7,7 @@ Mỗi agent chạy trong **một phiên riêng**, theo lịch riêng (giờ Vi�
 | 6:03 | Agent Marketing | Nghiên cứu | `runs/YYYY-MM-DD/marketing.md` |
 | 6:07 | Agent Kinh doanh & Bán hàng | Nghiên cứu | `runs/YYYY-MM-DD/sales.md` |
 | 6:11 | Agent Doanh nghiệp | Nghiên cứu | `runs/YYYY-MM-DD/enterprise.md` |
-| 6:41 | Agent Tổng hợp | Gộp 3 file, viết Claude Doc, gửi email | Claude Doc + email tới mrbeanvn21@gmail.com |
+| 6:41 | Agent Tổng hợp | Gộp 3 file, viết báo cáo, tạo poster + Word, gửi email | `report.md`, `poster.png`, `ban-tin-ai-YYYY-MM-DD.docx`, email tới mrbeanvn21@gmail.com |
 
 Các phiên trao đổi qua thư mục chung của dự án: `/mnt/project-files/ai-daily-report/runs/YYYY-MM-DD/`.
 Ngôn ngữ: tiếng Việt.
@@ -34,12 +34,21 @@ Nguồn gợi ý: aiagentstore.ai/ai-agent-news/this-week, aiagentsdirectory.com
 ## Agent 4 – Tổng hợp & gửi (6:41)
 1. Đọc 3 file kết quả của ngày. Thiếu file nào thì tự nghiên cứu nhanh mảng đó và ghi chú lại.
 2. Gộp, loại trùng, chọn 4–6 mục mạnh nhất mỗi mảng.
-3. Viết Claude Doc "Bản tin AI đột phá – DD/MM/YYYY":
-   - Tóm tắt nhanh: 5 điểm nổi bật nhất
-   - 1. AI cho Marketing (câu nhận định xu hướng + bảng: Ứng dụng | Đơn vị | Ngày | Điểm đột phá)
-   - 2. AI cho Kinh doanh & Bán hàng (như trên)
-   - 3. AI cho Doanh nghiệp (như trên)
-   - 4. Gợi ý hành động cho doanh nghiệp Việt Nam (3–4 gạch đầu dòng)
-   - Nguồn tham khảo
-4. Gửi email toàn bộ báo cáo + link Doc tới mrbeanvn21@gmail.com qua Gmail; gửi thông báo đẩy về điện thoại.
-5. Câu ngắn, có số liệu, không emoji. Ghi rõ khi số liệu do công ty tự công bố.
+3. Lưu `runs/YYYY-MM-DD/report.md` đúng khung (script poster đọc theo các tiêu đề này):
+   - `# Bản tin AI đột phá – DD/MM/YYYY`
+   - `## Tóm tắt nhanh`: 5 điểm nổi bật (danh sách đánh số)
+   - `## 1. AI cho Marketing`: dòng "Nhận định: ..." + bảng Ứng dụng | Đơn vị | Ngày | Điểm đột phá
+   - `## 2. AI cho Kinh doanh & Bán hàng`, `## 3. AI cho Doanh nghiệp`: như trên
+   - `## 4. Gợi ý hành động cho doanh nghiệp Việt Nam`: 3–4 gạch đầu dòng, dòng đầu là việc quan trọng nhất
+   - `## Nguồn tham khảo`
+   Có Claude Docs thì tạo thêm Doc cùng nội dung.
+4. Chạy `python3 tools/make_outputs.py runs/YYYY-MM-DD` để tạo:
+   - `poster.png`: poster tóm tắt (1080px ngang): 5 điểm nổi bật, các ứng dụng chính từng mảng, việc nên làm ngay.
+   - `ban-tin-ai-YYYY-MM-DD.docx`: báo cáo Word chi tiết, có phụ lục ghi chép đầy đủ của 3 agent nghiên cứu.
+5. Gửi email tới mrbeanvn21@gmail.com: poster hiển thị trong thư, toàn bộ báo cáo, đính kèm poster.png và file Word. Gửi thông báo đẩy về điện thoại.
+6. Câu ngắn, có số liệu, không emoji. Ghi rõ khi số liệu do công ty tự công bố.
+
+## Công cụ
+- `tools/make_outputs.py`: đọc `report.md` (+ 3 file của agent), tạo poster PNG (HTML + Playwright) và file Word (pandoc + python-docx). Cần: pandoc, python-docx, Node + Playwright, font Inter.
+- `tools/screenshot.js`: chụp HTML thành PNG.
+- Bản chạy được của 2 file này nằm ở `/mnt/project-files/ai-daily-report/tools/`.
