@@ -12,6 +12,8 @@ Mỗi agent chạy trong **một phiên riêng**, theo lịch riêng (giờ Vi�
 Các phiên trao đổi qua thư mục chung của dự án: `/mnt/project-files/ai-daily-report/runs/YYYY-MM-DD/`.
 Ngôn ngữ: tiếng Việt.
 
+**Ngày chạy:** máy chạy giờ UTC và có thể thiếu dữ liệu múi giờ, nên mọi phiên lấy ngày Việt Nam bằng `TZ=UTC-7 date +%F` (hôm qua: `TZ=UTC-7 date -d yesterday +%F`). Không dùng ngày UTC, không dùng `TZ=Asia/...`.
+
 ## Agent 1 – Marketing (6:03)
 Phạm vi: content/video/hình ảnh bằng AI, GEO/AI search visibility, quảng cáo & cá nhân hoá, KOL/creator, martech, mạng xã hội.
 Nguồn gợi ý: agilebrandguide.com (Yesterday's Marketing Technology & AI News), martech.org, adage.com, thông cáo báo chí (prnewswire, globenewswire, businesswire).
